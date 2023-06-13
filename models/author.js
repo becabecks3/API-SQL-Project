@@ -1,11 +1,3 @@
-/* const { Pool } = require('pg');
-const queries = require('./queries')
-const pool = new Pool({
-    host: 'localhost',
-    user: 'alex',
-    database: 'postgres',
-    password: '1234'
-}) */
 
 const pool = require('../utils/db-pg'); // Conexión a la BBDD
 const queries = require('../queries/authorQueries'); // Queries SQL

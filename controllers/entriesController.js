@@ -16,8 +16,8 @@ const getEntries = async (req, res) => {
 
 // POST http://localhost:3000/api/entries
 // let newEntry = {
-//     title:"noticia desde Node",
-//     content:"va a triunfar esto2",
+//     title:"Prueba",
+//     content:"Hello ****",
 //     email:"alejandru@thebridgeschool.es",
 //     category:"sucesos"}
 
@@ -32,9 +32,9 @@ const createEntry = async (req, res) => {
 
 // PUT http://localhost:3000/api/entries
 // let newEntry = {
-//     title:"noticia desde Node",
-//     new_title: "nuevo tituloo",
-//     content:"va a triunfar esto2",
+//     title:"Probando",
+//     new_title: "Pruebas, pruebas",
+//     content:"bye, bye,
 //     email:"alejandru@thebridgeschool.es",
 //     category:"sucesos"}
 
@@ -49,7 +49,7 @@ const updateEntry = async (req, res) => {
 
 // DELETE http://localhost:3000/api/entries
 // let newEntry = {
-//     title:"noticia desde Node"}
+//     title:"Prueba"}
 
 const deleteEntry = async (req, res) => {
     const dataEntry = req.body; // {title}
