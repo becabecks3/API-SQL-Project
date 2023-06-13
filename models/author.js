@@ -101,15 +101,15 @@ module.exports = authors;
 
 
 // Pruebas
-/*
-    getEntriesByEmail("birja@thebridgeschool.es")
-    .then(data=>console.log(data))
-*/
 
-/*
-getAllEntries()
-.then(data=>console.log(data))
-*/
+    // getEntriesByEmail("birja@thebridgeschool.es")
+    // .then(data=>console.log(data))
+
+
+
+// getAllEntries()
+// .then(data=>console.log(data))
+
 
 
 // let dataUpdateEntry = {
@@ -133,5 +133,5 @@ getAllEntries()
 //     "image":"https://t2.ea.ltmcdn.com/es/posts/5/8/1/cuidados_de_una_capibara_20185_orig.jpg",
 //     "new_email": "666@thebridgeschool.es"}
 
-// updateAuthor(newAuthor)
+// createAuthor(newAuthor)
 //     .then(val => console.log(val))

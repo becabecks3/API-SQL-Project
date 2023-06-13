@@ -34,8 +34,8 @@ const createAuthor = async (req, res) => {
 //     "name": "Ribiqui",
 //     "surname": "Rimiriz",
 //     "email":"666@thebridgeschool.es",
-//     "image":"https://t2.ea.ltmcdn.com/es/posts/5/8/1/cuidados_de_una_capibara_20185_orig.jpg"
- //    "new_email":"666@thebridgeschool.es"}
+//     "image":"https://t2.ea.ltmcdn.com/es/posts/5/8/1/cuidados_de_una_capibara_20185_orig.jpg",
+//     "new_email":"666@thebridgeschool.es"}
 
 const updateAuthor = async (req, res) => {
     const dataAuthor = req.body; // {name,surname,email,image,new_email}

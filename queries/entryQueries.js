@@ -1,4 +1,4 @@
-db_queries_entries = {
+entryQueries = {
     getAllEntries: `SELECT *
     FROM entries
     ORDER BY id_entry ASC`,
@@ -18,4 +18,4 @@ db_queries_entries = {
         VALUES ($1, $2, (NOW()), (SELECT authors.id_author FROM authors WHERE authors.email = $3), $4);`
 }
 
-module.exports = db_queries_entries;
+module.exports = entryQueries;

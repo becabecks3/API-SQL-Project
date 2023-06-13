@@ -99,18 +99,18 @@ module.exports = entries;
 
 
 // Pruebas
-/*
-    getEntriesByEmail("birja@thebridgeschool.es")
-    .then(data=>console.log(data))
-*/
 
-/*
-getAllEntries()
-.then(data=>console.log(data))
-*/
+    // getEntriesByEmail("birja@thebridgeschool.es")
+    // .then(data=>console.log(data))
 
 
-// let dataUpdateEntry = {
+
+// getAllEntries()
+// .then(data=>console.log(data))
+
+
+
+// let newEntry = {
 //     title: "Se suspende primavera sound",
 //     new_title: "Se suspende primavera sound por lluvia",
 //     content: "Corren rumores de que no habrá fiestón",
@@ -118,5 +118,5 @@ getAllEntries()
 //     category: "conciertos"
 // }
 
-// updateEntry(dataUpdateEntry)
+// createEntry(newEntry)
 //     .then(data => console.log(data))

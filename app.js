@@ -22,10 +22,9 @@ app.use(express.static('public'))
 
 
 //Rutas
-app.use(error404); 
 app.use('/api/entries', entriesRoutes);
 app.use('/api/authors', authorRoutes);
-
+app.use(error404); 
 
 app.listen(port, () => {
     console.log(

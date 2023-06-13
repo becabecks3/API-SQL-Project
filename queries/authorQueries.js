@@ -1,4 +1,4 @@
-db_queries_authors = {
+authorQueries = {
     getAllAuthors: `SELECT * FROM authors`,
     getAuthorsByEmail: `SELECT * FROM authors
     WHERE email = $1`,
@@ -11,4 +11,4 @@ db_queries_authors = {
     WHERE e.email = $1`
 }
 
-module.exports = db_queries_authors;
+module.exports = authorQueries;
