@@ -7,9 +7,9 @@ const pool = new Pool({
     password: '1234'
 }) */
 
-const pool = require('../utils/db_pgsql'); // Conexión a la BBDD
-const queries = require('../queries/author.queries'); // Queries SQL
-// const { deleteAuthor } = require('../controllers/authorsApiController');
+const pool = require('../utils/db-pg'); // Conexión a la BBDD
+const queries = require('../queries/authorQueries'); // Queries SQL
+// const { deleteAuthor } = require('../controllers/authorController');
 
 // GET
 const getAuthorsByEmail = async (email) => {
@@ -131,15 +131,15 @@ getAllEntries()
 // updateEntry(dataUpdateEntry)
 //     .then(data => console.log(data))
 
-// deleteAuthor({email: "santilemao@thebridgeschool.es"})
+// deleteAuthor({email: "6666@thebridgeschool.es"})
 //     .then(val => console.log(val))
 
 // let newAuthor = {
-//     "name": "LMAOOO",
-//     "surname": "LemaGFEH",
-//     "email":"santilemao@thebridgeschool.es",
-//     "image":"https://w7.pngwing.com/pngs/313/346/png-transparent-handsome-sign-illustration-agar-io-kuso-miso-technique-internet-meme-t-shirt-know-your-meme-thinking-man-face-manga-orange-thumbnail.png",
-//     "new_email": "santilemao@thebridgeschool.es"}
+//     "name": "Ribiqui",
+//     "surname": "Ramiriz",
+//     "email":"666@thebridgeschool.es",
+//     "image":"https://t2.ea.ltmcdn.com/es/posts/5/8/1/cuidados_de_una_capibara_20185_orig.jpg",
+//     "new_email": "666@thebridgeschool.es"}
 
 // updateAuthor(newAuthor)
 //     .then(val => console.log(val))

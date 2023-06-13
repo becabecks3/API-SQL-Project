@@ -7,8 +7,8 @@ const pool = new Pool({
     password: '1234'
 }) */
 
-const pool = require('../utils/db_pgsql'); // Conexión a la BBDD
-const queries = require('../queries/entry.queries'); // Queries SQL
+const pool = require('../utils/db-pg'); // Conexión a la BBDD
+const queries = require('../queries/entryQueries'); // Queries SQL
 
 // GET
 const getEntriesByEmail = async (email) => {

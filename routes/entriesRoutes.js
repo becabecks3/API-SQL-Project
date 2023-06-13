@@ -1,10 +1,10 @@
 const express = require('express');
-const entriesApiController = require("../controllers/entriesApiController");
-const entriesApiRouter = express.Router();
+const entriesController = require("../controllers/entriesController");
+const entriesRouter = express.Router();
 
-entriesApiRouter.get('/', entriesApiController.getEntries);
-entriesApiRouter.post('/', entriesApiController.createEntry);
-entriesApiRouter.put('/', entriesApiController.updateEntry);
-entriesApiRouter.delete('/', entriesApiController.deleteEntry);
+entriesRouter.get('/', entriesController.getEntries);
+entriesRouter.post('/', entriesController.createEntry);
+entriesRouter.put('/', entriesController.updateEntry);
+entriesRouter.delete('/', entriesController.deleteEntry);
 
-module.exports = entriesApiRouter;
+module.exports = entriesRouter;
