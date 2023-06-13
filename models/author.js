@@ -8,14 +8,15 @@ const pool = new Pool({
 }) */
 
 const pool = require('../utils/db_pgsql'); // Conexión a la BBDD
-const queries = require('../queries/entry.queries'); // Queries SQL
+const queries = require('../queries/author.queries'); // Queries SQL
+// const { deleteAuthor } = require('../controllers/authorsApiController');
 
 // GET
-const getEntriesByEmail = async (email) => {
+const getAuthorsByEmail = async (email) => {
     let client, result;
     try {
         client = await pool.connect(); // Espera a abrir conexion
-        const data = await client.query(queries.getEntriesByEmail, [email])
+        const data = await client.query(queries.getAuthorsByEmail, [email])
         result = data.rows
     } catch (err) {
         console.log(err);
@@ -27,11 +28,11 @@ const getEntriesByEmail = async (email) => {
 }
 
 // GET
-const getAllEntries = async () => {
+const getAllAuthors = async () => {
     let client, result;
     try {
         client = await pool.connect(); // Espera a abrir conexion
-        const data = await client.query(queries.getAllEntries)
+        const data = await client.query(queries.getAllAuthors)
         result = data.rows
     } catch (err) {
         console.log(err);
@@ -43,12 +44,12 @@ const getAllEntries = async () => {
 }
 
 // CREATE
-const createEntry = async (entry) => {
-    const { title, content, email, category } = entry;
+const createAuthor = async (author) => {
+    const { name, surname, email, image } = author;
     let client, result;
     try {
         client = await pool.connect(); // Espera a abrir conexion
-        const data = await client.query(queries.createEntry,[title, content, email, category])
+        const data = await client.query(queries.createAuthor,[name, surname, email, image])
         result = data.rowCount
     } catch (err) {
         console.log(err);
@@ -61,12 +62,12 @@ const createEntry = async (entry) => {
 
 //UPDATE
 
-const updateEntry = async (entry) => {
-    const { title, new_title, content, email, category } = entry;
+const updateAuthor = async (author) => {
+    const { name, surname, email, image, new_email } = author;
     let client, result;
     try {
         client = await pool.connect(); // Espera a abrir conexion
-        const data = await client.query(queries.updateEntry,[new_title, content, email, category, title])
+        const data = await client.query(queries.updateAuthor,[name, surname, email, image, new_email])
         result = data.rowCount
     } catch (err) {
         console.log(err);
@@ -79,13 +80,14 @@ const updateEntry = async (entry) => {
 
 // DELETE
 
-const deleteEntry = async (entry) => {
-    const { title } = entry;
+const deleteAuthor = async (author) => {
+    const { email } = author;
     let client, result;
     try {
         client = await pool.connect(); // Espera a abrir conexion
-        const data = await client.query(queries.deleteEntry,[title])
+        const data = await client.query(queries.deleteAuthor,[email])
         result = data.rowCount
+        console.log(email);
     } catch (err) {
         console.log(err);
         throw err;
@@ -95,15 +97,15 @@ const deleteEntry = async (entry) => {
     return result
 }
 
-const entries = {
-    getEntriesByEmail,
-    getAllEntries,
-    createEntry,
-    updateEntry,
-    deleteEntry
+const authors = {
+    getAuthorsByEmail,
+    getAllAuthors,
+    createAuthor,
+    updateAuthor,
+    deleteAuthor
 }
 
-module.exports = entries;
+module.exports = authors;
 
 
 // Pruebas
@@ -128,3 +130,16 @@ getAllEntries()
 
 // updateEntry(dataUpdateEntry)
 //     .then(data => console.log(data))
+
+// deleteAuthor({email: "santilemao@thebridgeschool.es"})
+//     .then(val => console.log(val))
+
+// let newAuthor = {
+//     "name": "LMAOOO",
+//     "surname": "LemaGFEH",
+//     "email":"santilemao@thebridgeschool.es",
+//     "image":"https://w7.pngwing.com/pngs/313/346/png-transparent-handsome-sign-illustration-agar-io-kuso-miso-technique-internet-meme-t-shirt-know-your-meme-thinking-man-face-manga-orange-thumbnail.png",
+//     "new_email": "santilemao@thebridgeschool.es"}
+
+// updateAuthor(newAuthor)
+//     .then(val => console.log(val))

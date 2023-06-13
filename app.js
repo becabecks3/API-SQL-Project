@@ -9,7 +9,7 @@ const port = 3000
 
 
 // Modulos de rutas
-const movieRoutes = require('./routes/movieRoutes');
+const movieRoutes = require('./routes/authorRoutes');
 
 // Middlewares
 app.use(express.json()); 
@@ -23,6 +23,7 @@ app.use(express.static('public'))
 //Rutas
 app.use(error404); 
 app.use('/api/entries', movieRoutes);
+app.use('/api/authors', movieRoutes);
 
 
 app.listen(port, () => {
